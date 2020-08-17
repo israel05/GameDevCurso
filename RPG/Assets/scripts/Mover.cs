@@ -8,7 +8,6 @@ public class Mover : MonoBehaviour
 
     [SerializeField] Transform target;
 
-    Ray lastRay;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +29,9 @@ public class Mover : MonoBehaviour
 
     private void MoveToCursor()
     {
+
+        #region Solo pruebas de region
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         bool hasHit = Physics.Raycast(ray, out hit); //el parametro out, se pasa y se devuelve modificado 
@@ -38,6 +40,6 @@ public class Mover : MonoBehaviour
         {
             GetComponent<NavMeshAgent>().destination = hit.point;
         }
-        
+        #endregion
     }
 }
