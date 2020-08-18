@@ -9,12 +9,15 @@ namespace RPG.Combat
     public class Fighter : MonoBehaviour, IAction
     {
         [SerializeField] float weaponRange = 2f;
-
+        [SerializeField]   float timeBetweenAttacks = 1f;
+        float timeSinceLastAttack = 0;
         Transform target;
 
 
         public void Update()
         {
+            timeSinceLastAttack += Time.deltaTime; //desde la ultima vez que se actualizo el fotograma
+            
             if (target == null) return;
 
             if (!GetIsInRange()) // sacamos esta funcion y asi no da excepción al poder tener un target null
@@ -26,13 +29,23 @@ namespace RPG.Combat
             else
             {
                 GetComponent<Mover>().Cancel();// no avances más
-                AttackBehavior();
+                AttackBehavior();//ataca ya
             }
         }
 
         private void AttackBehavior()
         {
-            GetComponent<Animator>().SetTrigger("attack"); //ataca ya
+
+            if(timeSinceLastAttack > timeBetweenAttacks)
+            {
+                GetComponent<Animator>().SetTrigger("attack");
+                timeSinceLastAttack = 0f;
+            }
+            else
+            {
+
+            }
+
         }
 
         private bool GetIsInRange()
