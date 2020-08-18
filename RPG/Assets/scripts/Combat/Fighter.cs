@@ -38,7 +38,8 @@ namespace RPG.Combat
 
         private void AttackBehavior()
         {
-            if(timeSinceLastAttack > timeBetweenAttacks)
+            transform.LookAt(target.transform);
+            if (timeSinceLastAttack > timeBetweenAttacks)
             {
                 // se va a Hit() que es llamado por la animacion
                 GetComponent<Animator>().SetTrigger("attack");
@@ -63,6 +64,7 @@ namespace RPG.Combat
         /// </summary>
         void Hit() {            
             target.TakeDamage(weaponDamage);
+            
         }
 
         public void Cancel()
