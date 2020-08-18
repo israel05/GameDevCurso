@@ -9,7 +9,9 @@ namespace RPG.Combat
     public class Fighter : MonoBehaviour, IAction
     {
         [SerializeField] float weaponRange = 2f;
+        [SerializeField] float weaponDamage = 2f;
         [SerializeField]   float timeBetweenAttacks = 1f;
+
         float timeSinceLastAttack = 0;
         Transform target;
 
@@ -40,6 +42,8 @@ namespace RPG.Combat
             {
                 GetComponent<Animator>().SetTrigger("attack");
                 timeSinceLastAttack = 0f;
+                Health healthComponent = target.GetComponent<Health>();
+                healthComponent.TakeDamage(weaponDamage);
             }
             else
             {

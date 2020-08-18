@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\scripts\Combat\CombatTarget.cs" />
     <Compile Include="Assets\scripts\Combat\Fighter.cs" />
+    <Compile Include="Assets\scripts\Combat\Health.cs" />
     <Compile Include="Assets\scripts\Controller\EnemyController.cs" />
     <Compile Include="Assets\scripts\Controller\PlayerController.cs" />
     <Compile Include="Assets\scripts\Core\ActionScheduler.cs" />
