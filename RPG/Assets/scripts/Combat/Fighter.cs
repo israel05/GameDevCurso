@@ -32,7 +32,7 @@ namespace RPG.Combat
             else
             {
                 GetComponent<Mover>().Cancel();// no avances más
-                AttackBehavior();//ataca ya
+                AttackBehavior();//ataca si es que cumples con canatacck
             }
         }
 
@@ -47,6 +47,14 @@ namespace RPG.Combat
             }        
         }
 
+
+        public bool CanAttack(CombatTarget combatTarget)
+        {
+            if (combatTarget == null) return false;
+            Health targetToTest = combatTarget.GetComponent<Health>();
+            return targetToTest != null && !targetToTest.IsDead;
+       
+        }
         private bool GetIsInRange()
         {
             return Vector3.Distance(transform.position, target.transform.position) < weaponRange;
