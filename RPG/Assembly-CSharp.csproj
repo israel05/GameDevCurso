@@ -69,6 +69,7 @@
     <Compile Include="Assets\scripts\Controller\PlayerController.cs" />
     <Compile Include="Assets\scripts\Core\ActionScheduler.cs" />
     <Compile Include="Assets\scripts\Core\FollowCamera.cs" />
+    <Compile Include="Assets\scripts\Core\IAction.cs" />
     <Compile Include="Assets\scripts\Movement\Mover.cs" />
     <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
     <Reference Include="UnityEngine">

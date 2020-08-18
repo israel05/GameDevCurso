@@ -7,14 +7,14 @@ namespace RPG.Core
     public class ActionScheduler : MonoBehaviour
     {
 
-        MonoBehaviour currentAction;
+        IAction currentAction;
 
-        public void StartAction(MonoBehaviour action) //porque tanto Fighter o Mover son Hijos de MOnoBehavior
+        public void StartAction(IAction action) //porque tanto Fighter o Mover son Hijos de MOnoBehavior
         {
             if (currentAction == action) return;
             if (currentAction != null)
             {
-                print("Cancelling " + currentAction);
+                currentAction.Cancel();
                
 
             }
