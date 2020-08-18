@@ -11,6 +11,7 @@ namespace RPG.Combat{
         {
             health = Mathf.Max(health - damage, 0);
             print("Enemigo con vida: " + health);
+            GetComponent<Animator>().SetTrigger("die");
         }
     }
 }

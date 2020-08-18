@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 3477545621435492866}
   - component: {fileID: 3477545621435493375}
   - component: {fileID: 3477545621435492867}
-  - component: {fileID: 4051634796217756148}
-  - component: {fileID: 5991082764109596728}
   - component: {fileID: 4412848442697301075}
   - component: {fileID: -11745986577788373}
   m_Layer: 0
@@ -91,33 +89,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
---- !u!114 &4051634796217756148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6732997266059579993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e3913193e06714429747ce0305bf548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5991082764109596728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6732997266059579993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bbf2a6793aa08942a73c6eec0bd72f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponRange: 2
-  weaponDamage: 2
-  timeBetweenAttacks: 1
 --- !u!114 &4412848442697301075
 MonoBehaviour:
   m_ObjectHideFlags: 0

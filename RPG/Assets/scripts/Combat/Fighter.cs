@@ -37,7 +37,6 @@ namespace RPG.Combat
 
         private void AttackBehavior()
         {
-
             if(timeSinceLastAttack > timeBetweenAttacks)
             {
                 // se va a Hit() que es llamado por la animacion
@@ -45,12 +44,7 @@ namespace RPG.Combat
                 timeSinceLastAttack = 0f;
              
                
-            }
-            else
-            {
-
-            }
-
+            }        
         }
 
         private bool GetIsInRange()
