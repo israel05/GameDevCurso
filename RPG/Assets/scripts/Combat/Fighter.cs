@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RPG.Movement;
-
+using RPG.Core;
 
 namespace RPG.Combat
 {
@@ -15,9 +15,9 @@ namespace RPG.Combat
 
         public void Update()
         {
-            
+            if (target == null) return;
 
-            if (target != null && !GetIsInRange()) // sacamos esta funcion y asi no da excepción al poder tener un target null
+            if (!GetIsInRange()) // sacamos esta funcion y asi no da excepción al poder tener un target null
                 // la trampa esta en que al dar la primera parte del if falso, no entra en la parte de calcular GetIsInRange que nos daria
                 // fallo por tener un target null
             {
@@ -36,6 +36,7 @@ namespace RPG.Combat
 
         public void Attack(CombatTarget combatTarget)
         {
+            GetComponent<ActionScheduler>().StartAction(this); //llamo a startaction para que sepa que soy yo quien lo llama
             target = combatTarget.transform;
         }
 

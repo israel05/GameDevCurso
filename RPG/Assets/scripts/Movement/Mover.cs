@@ -1,9 +1,11 @@
 ﻿using RPG.Combat;
+using RPG.Core;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+
 
 namespace RPG.Movement
 {
@@ -47,6 +49,7 @@ namespace RPG.Movement
 
         public void StartMoveAction(Vector3 destination)
         {
+            GetComponent<ActionScheduler>().StartAction(this); //llamo a startaction para que sepa que soy yo quien lo llama          
             GetComponent<Fighter>().Cancel(); //deja de atcar
             MoveTo(destination);
         }
