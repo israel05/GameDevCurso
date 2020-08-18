@@ -15,21 +15,33 @@ namespace RPG.Combat
 
         public void Update()
         {
-            bool isInRange = Vector3.Distance(target.position, this.transform.position) < weaponRange;
+            
 
-            if (target != null && !isInRange)
+            if (target != null && !GetIsInRange()) // sacamos esta funcion y asi no da excepción al poder tener un target null
+                // la trampa esta en que al dar la primera parte del if falso, no entra en la parte de calcular GetIsInRange que nos daria
+                // fallo por tener un target null
             {
                 GetComponent<Mover>().MoveTo(target.position);
-            } 
+            }
             else
             {
                 GetComponent<Mover>().Stop();// no avances más
             }
         }
 
+        private bool GetIsInRange()
+        {
+            return Vector3.Distance(target.position, this.transform.position) < weaponRange;
+        }
+
         public void Attack(CombatTarget combatTarget)
         {
             target = combatTarget.transform;
+        }
+
+        public void Cancel()
+        {
+            target = null;
         }
     }
 
