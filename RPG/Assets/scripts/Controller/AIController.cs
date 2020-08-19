@@ -13,8 +13,10 @@ namespace RPG.Control
     {
         [SerializeField] float chaseDistance = 5f;
         [SerializeField] float suspecionTime = 2f;
+        [SerializeField] float waypointDwellTime = 2f;
         [SerializeField] PatrolPath patrollPath;
         [SerializeField] float waypointTolerance = 1f;
+
 
         GameObject player;
         Fighter fighter;
@@ -23,6 +25,7 @@ namespace RPG.Control
 
         Vector3 guardPosition;
         float timeSinceLastSawPlayer = Mathf.Infinity; //tiempo desde que lo vi la ultima vez
+        float timeSinceArriveAtWaypoint = Mathf.Infinity;
         int currentWaypointIndex = 0;
 
 
@@ -40,14 +43,14 @@ namespace RPG.Control
 
         private void Update()
         {
-            if(health.IsDead)  {return;}
+            if (health.IsDead) { return; }
 
-           if (InAttackRangeOfPlayer() && fighter.CanAttack(player))
+            if (InAttackRangeOfPlayer() && fighter.CanAttack(player))
             {
                 timeSinceLastSawPlayer = 0;
                 AttackBheavior();
             }
-            else if (timeSinceLastSawPlayer< suspecionTime  )
+            else if (timeSinceLastSawPlayer < suspecionTime)
             {
                 SuspicionBehavior();
             }
@@ -56,7 +59,13 @@ namespace RPG.Control
             {
                 PatrollBehavior();
             }
+            UpdateTimers();
+        }
+
+        private void UpdateTimers()
+        {
             timeSinceLastSawPlayer += Time.deltaTime;
+            timeSinceArriveAtWaypoint += Time.deltaTime;
         }
 
         private void PatrollBehavior()
@@ -67,11 +76,16 @@ namespace RPG.Control
             {
                 if (AtWaypoint())
                 {
+                    timeSinceArriveAtWaypoint = 0;
                     CycleWaypoint();
                 }
                 nextPosition = GetCurrentWaypoint();
             }
-            mover.StartMoveAction(nextPosition);
+            if(timeSinceArriveAtWaypoint > waypointDwellTime)
+            {
+                mover.StartMoveAction(nextPosition);
+            }
+            
          
         }
 
