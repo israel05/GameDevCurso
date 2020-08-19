@@ -13,15 +13,17 @@ namespace RPG.Control
     {
         [SerializeField] float chaseDistance = 5f;
         [SerializeField] float suspecionTime = 2f;
-        [SerializeField] PatrollPathScript patrollPath;
+        [SerializeField] PatrolPath patrollPath;
         [SerializeField] float waypointTolerance = 1f;
+
         GameObject player;
         Fighter fighter;
-        Health health;
-        Vector3 guardLocation;
+        Health health;        
         Mover mover;
+
+        Vector3 guardPosition;
         float timeSinceLastSawPlayer = Mathf.Infinity; //tiempo desde que lo vi la ultima vez
-      
+        int currentWaypointIndex = 0;
 
 
 
@@ -30,7 +32,7 @@ namespace RPG.Control
             player = GameObject.FindWithTag("Player");
             fighter = GetComponent<Fighter>();
             health = GetComponent<Health>();
-            guardLocation = transform.position;
+            guardPosition = transform.position;
             mover = GetComponent<Mover>();
             
         }
@@ -60,7 +62,7 @@ namespace RPG.Control
         private void PatrollBehavior()
         {
             // go back to guardLocation
-            Vector3 nextPosition = guardLocation;
+            Vector3 nextPosition = guardPosition;
             if (patrollPath != null)
             {
                 if (AtWaypoint())
@@ -69,11 +71,8 @@ namespace RPG.Control
                 }
                 nextPosition = GetCurrentWaypoint();
             }
-
-
-            mover.StartMoveAction(guardLocation);
+            mover.StartMoveAction(nextPosition);
          
-            //fighter.Cancel();
         }
 
 
@@ -85,12 +84,12 @@ namespace RPG.Control
 
         private void CycleWaypoint()
         {
-            throw new NotImplementedException();
+            currentWaypointIndex = patrollPath.GetNextIndex(currentWaypointIndex);
         }
 
         private Vector3 GetCurrentWaypoint()
         {
-            throw new NotImplementedException();
+            return patrollPath.GetWaypoint(currentWaypointIndex);
         }
 
         
