@@ -13,13 +13,19 @@ namespace RPG.Movement
 
         [SerializeField] Transform target;
         NavMeshAgent navMeshAgent;
+        Health health;
 
 
-
-
+        private void Start()
+        {
+            navMeshAgent = GetComponent<NavMeshAgent>();
+            health = GetComponent<Health>();
+        }
 
         void Update()
         {
+            navMeshAgent.enabled = !health.IsDead; //si no esta muerto su meshagent funcionara
+            navMeshAgent = GetComponent<NavMeshAgent>();
             UpdateAnimator();
         }
 
@@ -33,11 +39,7 @@ namespace RPG.Movement
             float speed = localVelocity.z; //la velocidad hacia adelante
             GetComponent<Animator>().SetFloat("forwardSpeed", speed);
         }
-        public void Start()
-        {
-            
-            navMeshAgent = GetComponent<NavMeshAgent>();
-        }
+        
 
 
 

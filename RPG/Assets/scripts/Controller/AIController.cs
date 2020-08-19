@@ -13,18 +13,25 @@ namespace RPG.Control
         GameObject player;
         Fighter fighter;
         Health health;
+     
 
         private void Start()
         {
             player = GameObject.FindWithTag("Player");
             fighter = GetComponent<Fighter>();
             health = GetComponent<Health>();
+            
+
         }
 
 
         private void Update()
         {
-            if(health.IsDead) { return; }
+            if(health.IsDead) 
+            { 
+                
+                return; 
+            }
 
            if (InAttackRangeOfPlayer() && fighter.CanAttack(player))
             {
