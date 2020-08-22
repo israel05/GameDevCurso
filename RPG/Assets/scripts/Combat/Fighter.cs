@@ -27,7 +27,7 @@ namespace RPG.Combat
                 // la trampa esta en que al dar la primera parte del if falso, no entra en la parte de calcular GetIsInRange que nos daria
                 // fallo por tener un target null
             {
-                GetComponent<Mover>().MoveTo(target.transform.position);
+                GetComponent<Mover>().MoveTo(target.transform.position, 1f); //maxi velocidad de ataque
             }
             else
             {
