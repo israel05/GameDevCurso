@@ -73,6 +73,7 @@
     <Compile Include="Assets\scripts\Core\Health.cs" />
     <Compile Include="Assets\scripts\Core\IAction.cs" />
     <Compile Include="Assets\scripts\Movement\Mover.cs" />
+    <Compile Include="Assets\scripts\cinematics\CinematicControllRemover.cs" />
     <Compile Include="Assets\scripts\cinematics\CinematicTrigger.cs" />
     <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
     <None Include="Assets\Asset Packs\Animations by Explosive\README - Usage Rights for these assets 1.txt" />
