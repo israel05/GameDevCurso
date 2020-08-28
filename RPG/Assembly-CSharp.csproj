@@ -73,6 +73,7 @@
     <Compile Include="Assets\scripts\Core\Health.cs" />
     <Compile Include="Assets\scripts\Core\IAction.cs" />
     <Compile Include="Assets\scripts\Movement\Mover.cs" />
+    <Compile Include="Assets\scripts\cinematics\CinematicTrigger.cs" />
     <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
     <None Include="Assets\Asset Packs\Animations by Explosive\README - Usage Rights for these assets 1.txt" />
     <Reference Include="UnityEngine">
@@ -606,6 +607,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/GmeDev/Rpg/RPG/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>D:/GmeDev/Rpg/RPG/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/GmeDev/Rpg/RPG/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -624,17 +628,14 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/GmeDev/Rpg/RPG/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>D:/GmeDev/Rpg/RPG/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/GmeDev/Rpg/RPG/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/GmeDev/Rpg/RPG/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>D:/GmeDev/Rpg/RPG/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/GmeDev/Rpg/RPG/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
