@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 namespace RPG.Core
@@ -35,8 +36,9 @@ namespace RPG.Core
         private void UpdatePlayer(Portal otherPortal)
         {
              GameObject player = GameObject.FindWithTag("Player");
-            player.transform.position = otherPortal.spawnPoint.position;
+            player.GetComponent<NavMeshAgent>().Warp(otherPortal.spawnPoint.position);           
             player.transform.rotation = otherPortal.spawnPoint.rotation;
+           
         }
 
         private Portal GetOtherPortal()
