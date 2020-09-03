@@ -10,8 +10,15 @@ namespace RPG.Core
     public class Portal : MonoBehaviour
  
     {
+        enum DestinationIdentifier
+        {
+            A, B, C, D, E
+        }
+
+
         [SerializeField] int siguenteEscenaACargar;
         [SerializeField] Transform spawnPoint;
+        [SerializeField] DestinationIdentifier destination;
         private void OnTriggerEnter(Collider other)        
         {
             if (other.tag == "Player")
@@ -22,6 +29,13 @@ namespace RPG.Core
 
         private IEnumerator Trasition()
         {
+            if (siguenteEscenaACargar < 0)
+            {
+                Debug.LogError("siguenteEscenaACargar no ajustada.");
+                yield break;
+            }
+
+
             DontDestroyOnLoad(gameObject); // no borro el portal que llamo a esto, es el mismo truco que usababamos para la música entre niveles
             yield return SceneManager.LoadSceneAsync(siguenteEscenaACargar);
             // Al terminar la llamada yield, la función sigue desde aquí, convervando el entorno de quién lo llamo
@@ -46,6 +60,7 @@ namespace RPG.Core
             foreach (Portal portal in FindObjectsOfType<Portal>())
             {
                 if (portal == this) continue;
+                if (portal.destination != destination) continue;
                 return portal;
             }
             return null;
