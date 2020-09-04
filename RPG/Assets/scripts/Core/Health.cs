@@ -30,7 +30,7 @@ namespace RPG.Core{
 
             if (health < 0)
             {
-                IsDead == true;
+                IsDead = true;
             }
         }
 

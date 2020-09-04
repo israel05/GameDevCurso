@@ -34,7 +34,7 @@ namespace RPG.SceneManagement
         /// Llmada al sistema de salvados
         /// </summary>
 
-        private void Save()
+        public void Save()
         {
             GetComponent<SavingSystem>().Save(defaultSaveFile);
         }
@@ -47,7 +47,7 @@ namespace RPG.SceneManagement
         /// Llama al sistema de cargas
         /// </summary>
 
-        private void Load()
+        public void Load()
         {
             GetComponent<SavingSystem>().Load(defaultSaveFile);
         }
