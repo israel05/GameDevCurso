@@ -74,6 +74,10 @@
     <Compile Include="Assets\scripts\Core\IAction.cs" />
     <Compile Include="Assets\scripts\Core\PersistantObjectSpawner.cs" />
     <Compile Include="Assets\scripts\Movement\Mover.cs" />
+    <Compile Include="Assets\scripts\Saving\ISaveable.cs" />
+    <Compile Include="Assets\scripts\Saving\SaveableEntity.cs" />
+    <Compile Include="Assets\scripts\Saving\SavingSystem.cs" />
+    <Compile Include="Assets\scripts\Saving\SerializableVector3.cs" />
     <Compile Include="Assets\scripts\SceneManagement\Fader.cs" />
     <Compile Include="Assets\scripts\SceneManagement\Portal.cs" />
     <Compile Include="Assets\scripts\cinematics\CinematicControllRemover.cs" />
