@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: cd7c02280b3274d4687ffbda447f21b8, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: d09e55ff3bfabc84582366c14cf2db36, type: 2}
 --- !u!4 &47566126 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 62fa28cbb204e4546a2ad5c1580ee188,
@@ -821,7 +821,7 @@ PrefabInstance:
     - target: {fileID: 7564564588148964946, guid: 2e4b11d59657bbd44b90b39ad2cebd19,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.27482986
+      value: -0.2739296
       objectReference: {fileID: 0}
     - target: {fileID: 7564564588148964946, guid: 2e4b11d59657bbd44b90b39ad2cebd19,
         type: 3}
@@ -831,7 +831,7 @@ PrefabInstance:
     - target: {fileID: 7564564588148964946, guid: 2e4b11d59657bbd44b90b39ad2cebd19,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.324028
+      value: 6.3241386
       objectReference: {fileID: 0}
     - target: {fileID: 7564564588608610775, guid: 2e4b11d59657bbd44b90b39ad2cebd19,
         type: 3}
@@ -901,12 +901,12 @@ PrefabInstance:
     - target: {fileID: 7564564589209513046, guid: 2e4b11d59657bbd44b90b39ad2cebd19,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.27482986
+      value: -0.2739296
       objectReference: {fileID: 0}
     - target: {fileID: 7564564589209513046, guid: 2e4b11d59657bbd44b90b39ad2cebd19,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.324028
+      value: 6.3241386
       objectReference: {fileID: 0}
     - target: {fileID: 7564564589209513046, guid: 2e4b11d59657bbd44b90b39ad2cebd19,
         type: 3}
