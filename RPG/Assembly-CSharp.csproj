@@ -80,6 +80,7 @@
     <Compile Include="Assets\scripts\Saving\SerializableVector3.cs" />
     <Compile Include="Assets\scripts\SceneManagement\Fader.cs" />
     <Compile Include="Assets\scripts\SceneManagement\Portal.cs" />
+    <Compile Include="Assets\scripts\SceneManagement\SavingWrapper.cs" />
     <Compile Include="Assets\scripts\cinematics\CinematicControllRemover.cs" />
     <Compile Include="Assets\scripts\cinematics\CinematicTrigger.cs" />
     <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
