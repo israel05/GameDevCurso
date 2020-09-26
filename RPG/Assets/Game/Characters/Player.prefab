@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &7703401892207278142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2605301080589594220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e3913193e06714429747ce0305bf548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &409760218
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -40,6 +28,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   maxSpeed: 18.22
+--- !u!114 &7703401892207278142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2605301080589594220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3913193e06714429747ce0305bf548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1229086996382463278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97,6 +97,81 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
+--- !u!4 &1229086996382268586 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 461188, guid: 679ff741e12a7e740819ede24a7000b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1229086996382463278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4166456813559535108
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1229086996382268586}
+    m_Modifications:
+    - target: {fileID: 1752886265808238587, guid: 2ea65bc2f88422f4ea853939b5780e48,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752886265808238587, guid: 2ea65bc2f88422f4ea853939b5780e48,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752886265808238587, guid: 2ea65bc2f88422f4ea853939b5780e48,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752886265808238587, guid: 2ea65bc2f88422f4ea853939b5780e48,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752886265808238587, guid: 2ea65bc2f88422f4ea853939b5780e48,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752886265808238587, guid: 2ea65bc2f88422f4ea853939b5780e48,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752886265808238587, guid: 2ea65bc2f88422f4ea853939b5780e48,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752886265808238587, guid: 2ea65bc2f88422f4ea853939b5780e48,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752886265808238587, guid: 2ea65bc2f88422f4ea853939b5780e48,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752886265808238587, guid: 2ea65bc2f88422f4ea853939b5780e48,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752886265808238587, guid: 2ea65bc2f88422f4ea853939b5780e48,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8600835697840172947, guid: 2ea65bc2f88422f4ea853939b5780e48,
+        type: 3}
+      propertyPath: m_Name
+      value: Equipped Sword
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2ea65bc2f88422f4ea853939b5780e48, type: 3}
 --- !u!1001 &8743609830412106805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -119,6 +194,17 @@ PrefabInstance:
       propertyPath: timeBetweenAttacks
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 828268416446288304, guid: dc01a48e1f441a041918d652603a3bd7,
+        type: 3}
+      propertyPath: weaponPrefab
+      value: 
+      objectReference: {fileID: 8600835697840172947, guid: 2ea65bc2f88422f4ea853939b5780e48,
+        type: 3}
+    - target: {fileID: 828268416446288304, guid: dc01a48e1f441a041918d652603a3bd7,
+        type: 3}
+      propertyPath: handTransfor
+      value: 
+      objectReference: {fileID: 1229086996382268586}
     - target: {fileID: 3477545621435492867, guid: dc01a48e1f441a041918d652603a3bd7,
         type: 3}
       propertyPath: m_Enabled

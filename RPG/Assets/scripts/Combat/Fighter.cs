@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
+using System;
 
 namespace RPG.Combat
 {
@@ -11,10 +12,19 @@ namespace RPG.Combat
         [SerializeField] float weaponRange = 2f;
         [SerializeField] float weaponDamage = 2f;
         [SerializeField]   float timeBetweenAttacks = 1f;
+        [SerializeField] GameObject weaponPrefab = null;
+        [SerializeField] Transform handTransfor = null;
 
         float timeSinceLastAttack = Mathf.Infinity; 
         Health target;
 
+
+        private void Start()
+        {
+            SpawnWeapon();
+        }
+
+     
 
         public void Update()
         {
@@ -94,6 +104,13 @@ namespace RPG.Combat
             GetComponent<Animator>().ResetTrigger("attack");
             GetComponent<Animator>().SetTrigger("stopAttack");
         }
+
+        private void SpawnWeapon()
+        {
+            Instantiate(weaponPrefab, handTransfor);
+        }
+
+
     }
 
 }
