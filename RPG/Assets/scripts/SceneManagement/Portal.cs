@@ -56,6 +56,8 @@ namespace RPG.SceneManagement
 
             Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);
+
+            wrapper.Save(); //antes de cargar el siguiente, salva la posicion actual
             
             yield return new WaitForSeconds(fadeTime);
             yield return fader.FadeIn(fadeInTime);
@@ -70,7 +72,6 @@ namespace RPG.SceneManagement
             player.GetComponent<NavMeshAgent>().enabled = false;
             player.GetComponent<NavMeshAgent>().Warp(otherPortal.spawnPoint.position);           
             player.transform.rotation = otherPortal.spawnPoint.rotation;
-
             player.GetComponent<NavMeshAgent>().enabled = true;
         }
 
